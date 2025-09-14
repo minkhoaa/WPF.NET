@@ -8,3 +8,14 @@
 /home/khoa/Downloads/WPF.NET/MyStore.Library/bin/Debug/netstandard2.0/MyStore.Library.pdb
 /home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.dll
 /home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.pdb
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.dll
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.pdb
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\bin\Debug\netstandard2.0\MyStore.Library.deps.json
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\bin\Debug\netstandard2.0\MyStore.Library.dll
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\bin\Debug\netstandard2.0\MyStore.Library.pdb
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.AssemblyInfo.cs
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\WPF.NET\MyStore.Library\obj\Debug\netstandard2.0\MyStore.Library.sourcelink.json

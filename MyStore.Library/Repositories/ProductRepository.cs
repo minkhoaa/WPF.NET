@@ -2,53 +2,66 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using MyStore.Library.DataAccess;
+using MyStore.Library.Data;
 
 namespace MyStore.Library.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly MyStoreContext _context;
+        private readonly IDbContextFactory<MyStoreContext> _factory;
 
-        public ProductRepository(MyStoreContext context)
+        public ProductRepository(IDbContextFactory<MyStoreContext> factory)
         {
-            _context = context;
+            _factory = factory;
         }
 
-        public async Task<List<Product>> GetAllAsync() =>
-            await _context.Products.AsNoTracking().ToListAsync();
+        public async Task<List<Product>> GetAllAsync()
+        {
+            await using var db = await _factory.CreateDbContextAsync();
+            return await db.Products.AsNoTracking().ToListAsync();
+        }
 
-        public async Task<List<Product>> GetAllWithCategoryAsync() =>
-            await _context.Products
+        public async Task<List<Product>> GetAllWithCategoryAsync()
+        {
+            await using var db = await _factory.CreateDbContextAsync();
+            return await db.Products
                 .Include(p => p.Category)
                 .AsNoTracking()
                 .OrderBy(p => p.ProductId)
                 .ToListAsync();
+        }
 
         public async Task<Product?> GetByIdAsync(object id)
         {
             if (id is int intId)
             {
-                return await _context.Products.FindAsync(intId);
+                await using var db = await _factory.CreateDbContextAsync();
+                return await db.Products.FindAsync(intId);
             }
             return null;
         }
 
         public async Task AddAsync(Product entity)
         {
-            await _context.Products.AddAsync(entity);
+            await using var db = await _factory.CreateDbContextAsync();
+            await db.Products.AddAsync(entity);
+            await db.SaveChangesAsync();
         }
 
         public void Update(Product entity)
         {
-            _context.Products.Update(entity);
+            using var db = _factory.CreateDbContext();
+            db.Products.Update(entity);
+            db.SaveChanges();
         }
 
         public void Delete(Product entity)
         {
-            _context.Products.Remove(entity);
+            using var db = _factory.CreateDbContext();
+            db.Products.Remove(entity);
+            db.SaveChanges();
         }
 
-        public Task<int> SaveAsync() => _context.SaveChangesAsync();
+        public Task<int> SaveAsync() => Task.FromResult(0);
     }
 }

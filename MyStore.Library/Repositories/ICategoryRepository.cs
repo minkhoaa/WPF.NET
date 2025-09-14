@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using MyStore.Library.DataAccess;
+using MyStore.Library.Data;
 
 namespace MyStore.Library.Repositories
 {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MyStore.Library.DataAccess
+namespace MyStore.Library.Data
 {
     public class Category
     {

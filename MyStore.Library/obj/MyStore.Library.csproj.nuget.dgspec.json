@@ -1,30 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "/home/khoa/Downloads/WPF.NET/MyStore.Library/MyStore.Library.csproj": {}
+    "C:\\Users\\User\\Downloads\\WPF.NET\\MyStore.Library\\MyStore.Library.csproj": {}
   },
   "projects": {
-    "/home/khoa/Downloads/WPF.NET/MyStore.Library/MyStore.Library.csproj": {
+    "C:\\Users\\User\\Downloads\\WPF.NET\\MyStore.Library\\MyStore.Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/khoa/Downloads/WPF.NET/MyStore.Library/MyStore.Library.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Downloads\\WPF.NET\\MyStore.Library\\MyStore.Library.csproj",
         "projectName": "MyStore.Library",
-        "projectPath": "/home/khoa/Downloads/WPF.NET/MyStore.Library/MyStore.Library.csproj",
-        "packagesPath": "/home/khoa/.nuget/packages/",
-        "outputPath": "/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/",
+        "projectPath": "C:\\Users\\User\\Downloads\\WPF.NET\\MyStore.Library\\MyStore.Library.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Downloads\\WPF.NET\\MyStore.Library\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/khoa/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -32,25 +39,31 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.32, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.32, )"
+              "version": "[8.0.8, )"
             },
-            "NETStandard.Library": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[8.0.8, )"
             }
           },
           "imports": [
@@ -64,7 +77,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.119/RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

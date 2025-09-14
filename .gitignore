@@ -1,0 +1,27 @@
+﻿# VS / .NET
+.vs/
+*/bin/
+*/obj/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Build output
+artifacts/
+TestResults/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local env
+.local/
+.env.local

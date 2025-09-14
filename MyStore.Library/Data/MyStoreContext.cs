@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace MyStore.Library.DataAccess
+namespace MyStore.Library.Data
 {
     public class MyStoreContext : DbContext
     {

@@ -1,6 +1,4 @@
-version: "3.9"
-
-services:
+﻿services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: mystore-sql
@@ -12,7 +10,7 @@ services:
       - "1433:1433"
     volumes:
       - mssql-data:/var/opt/mssql
-      - ./sql:/init:ro
+      - ./infra/sql:/init:ro
     restart: unless-stopped
 
   db-init:
@@ -23,9 +21,11 @@ services:
     environment:
       - SA_PASSWORD=${SA_PASSWORD}
     volumes:
-      - ./sql:/init:ro
-    entrypoint: ["bash","-lc","for i in {1..60}; do sqlcmd -S sqlserver -U sa -P \"$SA_PASSWORD\" -C -i /init/MyStore.sql && exit 0; echo 'Waiting for SQL Server...'; sleep 2; done; echo 'Failed to initialize database' >&2; exit 1"]
+      - ./infra/sql:/init:ro
+    entrypoint: ["bash","-lc","for i in {1..60}; do /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P \"$SA_PASSWORD\" -C -i /init/MyStore.sql && exit 0; echo 'Waiting for SQL Server...'; sleep 2; done; echo 'Failed to initialize database' >&2; exit 1"]
 
 volumes:
   mssql-data:
+
+
 
