@@ -1,0 +1,10 @@
+/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.csproj.AssemblyReference.cache
+/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.GeneratedMSBuildEditorConfig.editorconfig
+/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.AssemblyInfoInputs.cache
+/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.AssemblyInfo.cs
+/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.csproj.CoreCompileInputs.cache
+/home/khoa/Downloads/WPF.NET/MyStore.Library/bin/Debug/netstandard2.0/MyStore.Library.deps.json
+/home/khoa/Downloads/WPF.NET/MyStore.Library/bin/Debug/netstandard2.0/MyStore.Library.dll
+/home/khoa/Downloads/WPF.NET/MyStore.Library/bin/Debug/netstandard2.0/MyStore.Library.pdb
+/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.dll
+/home/khoa/Downloads/WPF.NET/MyStore.Library/obj/Debug/netstandard2.0/MyStore.Library.pdb

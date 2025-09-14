@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = MyStore.Library
+build_property.ProjectDir = /home/khoa/Downloads/WPF.NET/MyStore.Library/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

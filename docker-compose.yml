@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mystore-sql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+      - SA_PASSWORD=${SA_PASSWORD}
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+      - ./sql:/init:ro
+    restart: unless-stopped
+
+  db-init:
+    image: mcr.microsoft.com/mssql-tools:latest
+    container_name: mystore-sql-init
+    depends_on:
+      - sqlserver
+    environment:
+      - SA_PASSWORD=${SA_PASSWORD}
+    volumes:
+      - ./sql:/init:ro
+    entrypoint: ["bash","-lc","for i in {1..60}; do sqlcmd -S sqlserver -U sa -P \"$SA_PASSWORD\" -C -i /init/MyStore.sql && exit 0; echo 'Waiting for SQL Server...'; sleep 2; done; echo 'Failed to initialize database' >&2; exit 1"]
+
+volumes:
+  mssql-data:
+
